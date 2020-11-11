@@ -2,11 +2,24 @@
 
 body {
     background-color: red;
-}
-header {
     font-family: 'Fredoka One', cursive;
+}
+
+/*
+========================================================
+    Header Styling
+========================================================
+*/
+
+header {
+    padding-bottom: 20px;
     text-align: center;
     color: white;
+}
+
+.main_links {
+    display: flex;
+    justify-content: center;
 }
 
 .main_links a {
@@ -14,6 +27,7 @@ header {
     padding: 10px 30px;
     color: white;
     text-decoration: none;
+    width: 100px;
 }
 
 .main_links a:hover {
@@ -21,6 +35,12 @@ header {
     color: red;
     background-color: white;
 }
+
+/*
+========================================================
+    Moving Sidebar Navigation
+========================================================
+*/
 
 #sticky_nav {
     position: sticky;
@@ -44,4 +64,37 @@ header {
 #sticky_nav:hover .content {
     display: block;
     list-style: none;
+}
+
+/*
+========================================================
+    Footer Styling
+========================================================
+*/
+
+#page_container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content_wrap {
+    height: 90vh;
+}
+
+footer {
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+}
+
+footer a, p {
+    text-decoration: none;
+    color: red;
+}
+
+footer p {
+    font-size: 10px;
 }
