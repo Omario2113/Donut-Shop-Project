@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    background-color: red;
+    font-family: 'Fredoka One', cursive;
+}
+
+/*
+========================================================
+    Main Content Styling
+========================================================
+*/
+
+.main_body {
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+/*
+========================================================
+    Header Styling
+========================================================
+*/
+
+header {
+    padding-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.main_links {
+    display: flex;
+    justify-content: center;
+}
+
+.main_links a {
+    border-top: white solid 1px;
+    padding: 10px 30px;
+    color: white;
+    text-decoration: none;
+    width: 100px;
+}
+
+.main_links a:hover {
+    padding: 10px 30px;
+    color: red;
+    background-color: white;
+}
+
+
+/*
+========================================================
+    Menu Styling
+========================================================
+*/
+
+#menu_nav {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+}
+
+.food_type {
+    box-sizing: border-box;
+    border: 3px solid red;
+    border-radius: 10px;
+    margin: 20px 30px;
+    width: 20%;
+    text-align: center;
+    background-color: white;
+    color: red;
+    text-decoration: none;
+}
+
+#menu {
+    margin-left: 70px;
+    align-content: center;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.food_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.menu_item {
+    display: grid;
+    grid-template-areas: "pic"
+                        "name"
+                        "desc";
+    grid-template-columns: 150px;
+    grid-template-rows: 150px 80px 80px;
+    margin: 0px 30px 30px 0px;
+    text-align: right;
+    border: 3px solid red;
+    border-radius: 5px;
+}
+
+#menu img {
+    grid-area: pic;
+    object-fit: cover;
+    height: 150px;
+    width: 150px;
+}
+
+#menu ul h3 {
+    grid-area: name;
+}
+
+#menu ul p {
+    grid-area: desc;
+}
+
+#menu ul h3, p {
+    margin: 20px 0px 0px 0px;
+    padding-right: 5px;  
+}
+
+/*
+========================================================
+    Menu Media Query
+========================================================
+*/
+
+@media screen and (min-width: 900px) {
+    .menu_item {
+        grid-template-areas: "pic name"
+                            "pic desc";
+        grid-template-columns: 150px 200px;
+        grid-template-rows: 70px 80px;
+        padding-right: 5px;
+    }
+}
+
+/*
+========================================================
+    Contact Us Page Styling
+========================================================
+*/
+
+.contact_info {
+    display: grid;
+    grid-template-areas: "telecom loc"
+                        "qs qs";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 150px auto;
+}
+
+.contact_info h2 {
+    margin: 20px 10px;
+}
+
+#c_info {
+    grid-area: telecom;
+}
+
+#l_info {
+    grid-area: loc;
+}
+
+#quest {
+    grid-area: qs;
+    width: 90%;
+    justify-self: center;
+}
+
+#c_info, #l_info {
+    display: inline-flex;
+    border: 3px solid gray;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: fit-content;
+    justify-self: center;
+}
+
+#c_info p, #l_info p {
+    text-align: right;
+}
+
+    /***  Questions Form Formatting  ***/
+
+#questions {
+    border: 3px solid gray;
+    border-radius: 5px;
+    margin: 20px auto;
+    padding-top: 10px;
+}
+
+#questions label {
+    margin: 10px 20px;
+}
+
+#questions input[type=text], #questions textarea {
+    width: 90%;
+    margin: 10px 20px;
+    padding: 8px 12px;
+    box-sizing: border-box;
+}
+
+#questions input[type=text]:focus {
+    outline: none;
+    border: 3px solid red;
+}
+
+/*
+========================================================
+    Contact Us Media Query
+========================================================
+*/
+
+@media screen and (max-width: 750px) {
+    .contact_info {
+        grid-template-areas: "telecom"
+                            "loc"
+                            "qs";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 125px) auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #c_info, #l_info {
+        width: 70%;
+    }
+}
+
+/*
+========================================================
+    Footer Styling
+========================================================
+*/
+
+footer {
+    text-align: center;
+    background-color: red;
+    padding: 10px 0px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    font-size: 12px;
+    color: white;
+}
+
+/*
+========================================================
+    Moving Sidebar Navigation
+========================================================
+
+#sticky_nav {
+    position: sticky;
+    top: 50px;
+    float: left;
+    border: white solid 5px;
+    color: white;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+.content {
+    display: none;
+    padding: 10px 20px;
+    background-color: white;
+    position: absolute;
+    width: 75px;
+}
+
+#sticky_nav:hover .content {
+    display: block;
+    list-style: none;
+}
+*/
