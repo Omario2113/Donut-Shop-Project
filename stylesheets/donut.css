@@ -47,6 +47,60 @@ header {
     background-color: white;
 }
 
+/*
+========================================================
+    Home Page Styling
+========================================================
+*/
+
+#page_nav {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0px;
+}
+
+.page_jump {
+    width: 20%;
+    height: 500px;
+    margin: 0px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    border-radius: 3px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(90%);
+    transition: width 0.1s, filter 0.1s;
+}
+
+.page_jump h2 {
+    font-size: 40px;
+    width: fit-content;
+    background-color: white;
+    opacity: 0.8;
+}
+
+.page_jump p {
+    display: none;
+    background-color: white;
+    opacity: 0.8;
+    width: 90%;
+    padding: 30px 0px;
+    margin-top: 150px;
+    float: right;
+    font-size: 20px;
+}
+
+.page_jump:hover {
+    width: 40%;
+    filter: grayscale(0%);
+}
+
+.page_jump:hover p{
+    display: block;
+}
 
 /*
 ========================================================
@@ -174,7 +228,7 @@ header {
     border: 3px solid gray;
     border-radius: 5px;
     margin-top: 20px;
-    width: fit-content;
+    width: 90%;
     justify-self: center;
 }
 
@@ -221,13 +275,12 @@ header {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, 125px) auto;
     }
-}
 
-@media screen and (min-width: 1000px) {
     #c_info, #l_info {
-        width: 70%;
+        width: fit-content;
     }
 }
+
 
 /*
 ========================================================
@@ -250,32 +303,3 @@ footer p {
     font-size: 12px;
     color: white;
 }
-
-/*
-========================================================
-    Moving Sidebar Navigation
-========================================================
-
-#sticky_nav {
-    position: sticky;
-    top: 50px;
-    float: left;
-    border: white solid 5px;
-    color: white;
-    border-radius: 10px;
-    margin-left: 30px;
-}
-
-.content {
-    display: none;
-    padding: 10px 20px;
-    background-color: white;
-    position: absolute;
-    width: 75px;
-}
-
-#sticky_nav:hover .content {
-    display: block;
-    list-style: none;
-}
-*/
