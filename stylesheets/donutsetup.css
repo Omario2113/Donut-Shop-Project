@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {box-sizing: border-box;}
+
+body {
+    background-color: red;
+    font-family: 'Fredoka One', cursive;
+    display: grid;
+    grid-template-areas: "head"
+                         "cont"
+                         "foot";
+    grid-template-rows: 70px 1fr 70px;
+}
+
+/*
+========================================================
+    Header Styling
+========================================================
+*/
+
+header {
+    grid-area: head;
+    display: grid;
+    grid-template-areas: "logo navi log";
+    grid-template-columns: 70px 1fr 100px;
+}
+
+#logo {
+    grid-area: logo;
+    margin: 4px;
+    border: white solid 1px;
+}
+
+#loginbutton {
+    grid-area: log;
+    margin: 10px;
+    padding: 12px 15px;
+    text-decoration: none;
+    background-color: white;
+    color: red;
+    border-radius: 10px;
+    border: white solid 1px;
+}
+
+#loginbutton:hover {
+    background-color: gainsboro;
+}
+
+.main_links {
+    grid-area: navi;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main_links a {
+    color: white;
+    text-decoration: none;
+    width: fit-content;
+    padding: 26px 10px;
+}
+
+.main_links a:hover {
+    color: red;
+    background-color: gainsboro;
+}
+
+#link-box {
+    grid-area: logo;
+    display: none;
+    position: sticky;
+    top: 10px;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#sticky-links {
+    display: none;
+    position: absolute;
+    top: 50px;
+    width: 70px;
+    height: 20px;
+    background-color: white;
+}
+
+#sticky-links a {
+    color: red;
+    text-decoration: none;
+    width: 100%;
+}
+
+/*
+========================================================
+    Main Content Styling
+========================================================
+*/
+
+.main_body {
+    grid-area: cont;
+    background-color: white;
+    padding-bottom: 20px;
+}
+
+/*
+========================================================
+    Footer Styling
+========================================================
+*/
+
+footer {
+    grid-area: foot;
+    text-align: center;
+    background-color: red;
+    padding: 10px 0px;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    font-size: 12px;
+    color: white;
+}
+
+/*
+===============================================================
+       HEADER MEDIA QUERIES
+===============================================================
+*/
+
+@media screen and (max-width: 750px) {
+    #link-box {
+        display: inline-block;
+    }
+
+    #link-box:hover #sticky-links {
+        display: block;
+    }
+
+    .main_links {
+        display: none;
+    }
+
+    #link-box {
+        grid-area: logo;
+    }
+
+    #logo {
+        grid-area: navi;
+        width: 70px;
+        justify-self: center;
+    }
+}
